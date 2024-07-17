@@ -13,11 +13,10 @@ ICONOS Dependiendo el clima.
 
 window.addEventListener('load', () => {
     // CREAR VARIABLE APIKEY 
-    let apiKey;
+    let apiKey = '';
     fetch('/.netlify/functions/env')
         .then(res => res.text())
         .then(data => {
-            console.log(data)
             apiKey = data;
         })
     const buscarCiudad = document.getElementById('buscar');
