@@ -10,10 +10,10 @@ Fecha.
 ICONOS Dependiendo el clima.
 */
 
-
+const { handler } = require('./functions/env');
 window.addEventListener('load', () => {
-    // CREAR VARIABLE APIKEY
-    
+    // CREAR VARIABLE APIKEY 
+    let apiKey = handler;
     const buscarCiudad = document.getElementById('buscar');
     const btnBuscar = document.getElementById('btn_buscar');
 
