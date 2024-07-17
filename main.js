@@ -16,7 +16,6 @@ window.addEventListener('load', () => {
     fetch('/.netlify/functions/env')
         .then(res => res.text())
         .then(data => {
-            console.log(data)
             apiKey = data;
         })
     const buscarCiudad = document.getElementById('buscar');
