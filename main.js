@@ -10,10 +10,15 @@ Fecha.
 ICONOS Dependiendo el clima.
 */
 
-const { handler } = require('./functions/env');
 window.addEventListener('load', () => {
     // CREAR VARIABLE APIKEY 
-    let apiKey = handler;
+    let apiKey;
+    fetch('/.netlify/functions/env')
+        .then(res => res.text())
+        .then(data => {
+            console.log(data)
+            apiKey = data;
+        })
     const buscarCiudad = document.getElementById('buscar');
     const btnBuscar = document.getElementById('btn_buscar');
 
